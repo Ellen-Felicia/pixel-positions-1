@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <div class="space-x-6 front-bold">
+            <div class="space-x-6">
                 <a href="#">Jobs</a>
                 <a href="#">Careers</a>
                 <a href="#">Salaries</a>
@@ -27,11 +27,9 @@
         </nav>
 
 
-        <main>
+        <main class="mt-10 max-w-[986px] mx-auto">
             {{ $slot }}
         </main>
-
-         <div class="font-bold font-size py-10">Tag</div>
 
     </div>
 </body>
