@@ -19,4 +19,14 @@ public function test_belongs_to_an_employer() {
 
     expect($job->employer->is($employer))->toBeTrue();
 }
+
+public function can_have_tags() {
+    $job = Job::factory()->create();
+    $job->tags()->attach([1, 2, 3]); // Assuming tags with IDs 1, 2, and 3 exist
+
+    expect($job->tags->count())->toBe(3);
+    expect($job->tags->pluck('id'))->toContain(1, 2, 3);
+
+}
+
 }
