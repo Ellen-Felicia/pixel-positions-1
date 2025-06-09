@@ -23,7 +23,7 @@ class JobFactory extends Factory
             'location' => 'Remote',
             'schedule' => fake()->randomElement(['Full-time', 'Part-time', 'Contract']),
             'URL' => fake()->url,
-            'FEATURED' => false,
+            'featured' => false,
             'employer_id' => Employer::factory(),
 
         ];
