@@ -23,4 +23,3 @@ class EmployerFactory extends Factory
         ];
     }
 }
- 

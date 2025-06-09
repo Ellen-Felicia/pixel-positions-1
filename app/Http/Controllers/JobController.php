@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use App\Models\Tag;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
+
+
 
 class JobController extends Controller
 {
@@ -14,7 +17,8 @@ class JobController extends Controller
     public function index()
     {
       return view('index', [
-          'jobs' => Job::latest()->paginate(10),
+          'jobs' => Job::all(),
+          'tags' => Tag::all(),
       ]);
     }
 

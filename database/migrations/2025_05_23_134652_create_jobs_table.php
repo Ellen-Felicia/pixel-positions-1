@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('location');
             $table->string('schedule')->default('Full Time');
             $table->string('url');
-            $table->string('featured')->boolean('false');
+            $table->boolean('featured')->default(false);
             $table->timestamps();
+           
         });
     }
 
